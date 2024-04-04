@@ -21,7 +21,7 @@ npm install
 ```
 touch .env
  ```
-3. Paste your API key afer *'='* and don't forget to *remove the bracket* 
+4. Paste your API key afer *'='* and don't forget to *remove the bracket* 
 ```
 VITE_PEXELS_API={YOUR KEY}
 ```
@@ -32,7 +32,7 @@ VITE_PEXELS_API={YOUR KEY}
 npm run dev
 ``` 
 
-5. in your URL type `localhost:5173` and you're done :grin: 
+6. in your URL type `localhost:5173` and you're done :grin: 
 
 ## ESLint configuration
 
