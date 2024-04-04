@@ -1,34 +1,15 @@
 // src/hooks/useFetchImages.js
 
 import { useEffect, useState } from "react";
+import { type Image } from "../lib/types";
 
-type Image = {
-  id: number;
-  width: number;
-  alt: string;
-  height: number;
-  url: string;
-  photographer: string;
-  photographer_url: string;
-  photographer_id: number;
-  avg_color: string;
-  src: {
-    original: string;
-    large2x: string;
-    large: string;
-    medium: string;
-    small: string;
-    portrait: string;
-    landscape: string;
-    tiny: string;
-  };
-  liked: boolean;
-}
-
-
-const useFetchImages = (query:string, perPage:number = 9, page:number = 3) => {
+const useFetchImages = (
+  query: string,
+  perPage: number = 9,
+  page: number = 3
+) => {
   const [images, setImages] = useState<Image[]>([]);
-  const [loading,setLoading] = useState<boolean>(false);
+  const [loading, setLoading] = useState<boolean>(false);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -53,7 +34,7 @@ const useFetchImages = (query:string, perPage:number = 9, page:number = 3) => {
     fetchData();
   }, [query, perPage, page]);
 
-  return {images, loading};
+  return { images, loading };
 };
 
 export default useFetchImages;

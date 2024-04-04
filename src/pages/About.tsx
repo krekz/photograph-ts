@@ -1,5 +1,5 @@
 import Navbar from "../components/Navbar";
-import AboutArtist from "../components/about/AboutArtist";
+import AboutArtist from "../components/About/AboutArtist";
 
 const About = () => {
   return (

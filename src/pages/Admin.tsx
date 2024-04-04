@@ -1,6 +1,7 @@
-import Dashboard from "../components/admin/Dashboard";
-import Sidebar from "../components/admin/Sidebar";
+import Dashboard from "../components/Admin/Dashboard";
+import Sidebar from "../components/Admin/Sidebar";
 
+// NOT FINISH YET
 const Admin = () => {
   return (
     <>
