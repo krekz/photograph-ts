@@ -1,30 +1,70 @@
-# React + TypeScript + Vite
+>[!WARNING]
+>This is not fully coded yet, more things need to be added soon
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# How to run on your local machine?
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+1. Clone this repository into your directory 
+``` 
+git clone https://github.com/krekz/photograph-ts.git
+```
+2. Then, in your terminal 
+```
+cd photograph-ts
+npm install
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+
+ >[!IMPORTANT]
+> You have to register your own [Pexels API key](https://www.pexels.com/api/) **BEFORE PROCEED TO STEP 3**
+3. Create *.env* file into your directory
+```
+touch .env
+ ```
+3. Paste your API key afer *'='* and don't forget to *remove the bracket* 
+```
+VITE_PEXELS_API={YOUR KEY}
+```
+
+
+5. proceed with in the terminal
+ ```
+npm run dev
+``` 
+
+5. in your URL type `localhost:5173` and you're done :grin: 
+
+## ESLint configuration
+
+1. Create *.eslintrc.cjs*
+
+   ```
+   touch .eslintrc.cjs
+   ```
+2. Copy this to eslint file
+   ```cjs
+   module.exports = {
+    root: true,
+    env: { browser: true, es2020: true },
+    extends: [
+      'eslint:recommended',
+      'plugin:react/recommended',
+      'plugin:react/jsx-runtime',
+      'plugin:react-hooks/recommended',
+    ],
+    ignorePatterns: ['dist', '.eslintrc.cjs'],
+    parserOptions: { ecmaVersion: 'latest', sourceType: 'module' },
+    settings: { react: { version: '18.2' } },
+    plugins: ['react-refresh'],
+    rules: {
+      'react/jsx-no-target-blank': 'off',
+      'react-refresh/only-export-components': [
+        'warn',
+        { allowConstantExport: true },
+      ],
+    },
+   }
+  
+3. Done
+
+
