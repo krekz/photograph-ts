@@ -1,11 +1,11 @@
 import { createBrowserRouter } from "react-router-dom";
 import Index from "./pages/Index";
-import GalleryDetail from "./pages/GalleryDetail";
+import Gallery from "./pages/Gallery";
 import Error from "./pages/Error";
 import Admin from "./pages/Admin";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
-import Category from "./pages/CategoryPages";
+import CategoryItemPages from "./pages/CategoryItemPages";
 
 export const router = createBrowserRouter([
     {
@@ -14,7 +14,7 @@ export const router = createBrowserRouter([
     },
     {
         path: '/gallery',
-        element: <GalleryDetail />,
+        element: <Gallery />,
     },
     {
         path: '/admin',
@@ -29,20 +29,24 @@ export const router = createBrowserRouter([
         element: <About />,
     },
     {
-        path: '/wedding',
-        element: <Category />,
+        path: 'gallery/wedding',
+        element: <CategoryItemPages />,
     },
     {
-        path: '/graduation',
-        element: <Category />,
+        path: 'gallery/graduation',
+        element: <CategoryItemPages />,
     },
     {
-        path: '/videography',
-        element: <Category />,
+        path: 'gallery/videography',
+        element: <CategoryItemPages />,
     },
     {
-        path: '/street',
-        element: <Category />,
+        path: 'gallery/street',
+        element: <CategoryItemPages />,
+    },
+    {
+        path: 'gallery/all',
+        element: <CategoryItemPages />,
     },
     { 
         path: '*', 

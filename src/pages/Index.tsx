@@ -1,17 +1,17 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import Hero from "../components/home/Hero";
-import Categories from "../components/home/Categories";
-import Artist from "../components/home/Artist";
-import Faq from "../components/home/Faq";
-import Testimonials from "../components/home/Testimonials";
+import Hero from "../components/Index/Hero";
+import Artist from "../components/Index/Artist";
+import Faq from "../components/Index/Faq";
+import Testimonials from "../components/Index/Testimonials";
+import Featured from "../components/Index/Featured";
 
 const Index = () => {
   return (
     <>
       <Navbar />
       <Hero />
-      <Categories />
+      <Featured />
       <Artist />
       <Faq />
       <Testimonials />
