@@ -2,7 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import Index from "./pages/Index";
 import Gallery from "./pages/Gallery";
 import Error from "./pages/Error";
-import Admin from "./pages/Admin";
+import Admin from "./pages/admin/Admin";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
 import CategoryItemPages from "./pages/CategoryItemPages";
@@ -18,6 +18,10 @@ export const router = createBrowserRouter([
     },
     {
         path: '/admin',
+        element: <Admin />,
+    },
+    {
+        path: '/admin/dashboard',
         element: <Admin />,
     },
     {

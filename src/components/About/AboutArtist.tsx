@@ -1,6 +1,6 @@
 const AboutArtist = () => {
   return (
-    <div className="mt-32 container flex flex-col justify-center items-center mx-auto w-full md:w-1/2 text-center  object-cover p-5 ">
+    <div className="mt-20 md:mt-32 container flex flex-col justify-center items-center mx-auto w-full md:w-1/2 text-center  object-cover p-5 ">
       <h1 className="text-4xl font-bold ">About The Artist</h1>
       <img src="/troll.png" alt="trollll" />
       <p>
